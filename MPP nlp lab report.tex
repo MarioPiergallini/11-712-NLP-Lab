@@ -1,0 +1,108 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsfonts,eucal,amsbsy,amsopn,amsmath}
+\usepackage{url}
+\usepackage[sort&compress]{natbib}
+\usepackage{natbibspacing}
+\usepackage{latexsym}
+\usepackage{wasysym} 
+\usepackage{rotating}
+\usepackage{fancyhdr}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\usepackage{sectsty}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{multicol}
+\definecolor{orange}{rgb}{1,0.5,0}
+\usepackage{multirow}
+\usepackage{sidecap}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\renewcommand{\captionfont}{\small}
+\setlength{\oddsidemargin}{-0.04cm}
+\setlength{\textwidth}{16.59cm}
+\setlength{\topmargin}{-0.04cm}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{22.94cm}
+\allsectionsfont{\normalsize}
+\newcommand{\ignore}[1]{}
+\newenvironment{enumeratesquish}{\begin{list}{\addtocounter{enumi}{1}\arabic{enumi}.}{\setlength{\itemsep}{-0.25em}\setlength{\leftmargin}{1em}\addtolength{\leftmargin}{\labelsep}}}{\end{list}}
+\newenvironment{itemizesquish}{\begin{list}{\setcounter{enumi}{0}\labelitemi}{\setlength{\itemsep}{-0.25em}\setlength{\labelwidth}{0.5em}\setlength{\leftmargin}{\labelwidth}\addtolength{\leftmargin}{\labelsep}}}{\end{list}}
+
+\bibpunct{(}{)}{;}{a}{,}{,}
+\newcommand{\nascomment}[1]{\textcolor{blue}{\textbf{[#1 --NAS]}}}
+
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage~of \pageref{lastpage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\title{11-712:  NLP Lab Report}
+\author{Mario Piergallini}
+\date{April 26, 2013}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\nascomment{one paragraph here summarizing what the paper is about}
+\end{abstract}
+
+\nascomment{brief introduction}
+
+\section{Basic Information about Caribbean Spanish}
+
+Spanish is a language belonging to the western branch of the Romance language family. While it only inflects nouns and adjectives for gender and number, it has a rich verbal inflectional system. Verbal suffixes can potentially account for person, number, tense, aspect and mood and has about fifty conjugated forms per verb. Since Spanish is a well-studied language, I have chosen to concentrate on Caribbean Spanish from informal online sources since it tends to diverge from standard Spanish in both grammar and orthography and thus previous work in this area will not necessarily be adequate to analyse such data.
+
+Caribbean Spanish is a family of dialects primarily spoken in the countries of Cuba, the Dominican Republic and Puerto Rico. Some parts of mainland Latin America can also be included in the definition, such as southern Florida, Panama, parts of Colombia and Venezuela. I will, however, primarily be concentrating on Puerto Rican (PR Spanish) and Dominican Spanish (Dom Spanish), which are fairly similar to each other.
+
+There are commonly thought to be three major areas in Spanish dialects: the Castillian area, covering central and northern Spain; the textit{zona alteña}, based in highland Latin America and covering most of Mexico, Central America and non-coastal South America; and the \textit{zona bajeña} covering Andalusia in Spain, the Canary Islands and lowland Latin America, including Caribbean, Argentinian and Chilean Spanish.
+
+As Latin American dialects, Puerto Rican and Dominican Spanish have certain features. Firstly, they lack a distinction between /s/ and /z/ (the latter representing the voiceless interdental fricative in Spanish orthography), a pattern commonly referred to as \textit{seseo}. Likewise, they feature \textit{yeísmo}, the lack of distinction between /y/ and /ll/ (the voiced palatal fricative/approximant and palatal lateral approximant). More specifically, as \textit{bajeña} dialects, they also have a tendency to reduce /s/ to an [h] sound, or delete it altogether when it appears in the coda of a syllable, as well as to velarize /n/ when it appears in a syllable coda.
+
+Features that are more particular to these two dialects are frequent deletion of word final and intervocalic /d/ (so a word such as \textit{todo} may be produced as [to:] or [to]) as well as neutralization of the distinction between /r/ and /l/ in syllable codas. In PR Spanish, it is generally that /r/ merges to /l/, while in Dominican Spanish they may both reduce to [j]. They both also have a tendency to shorten words, so that \textit{¿Para adónde vas?} "Where are you going?" may be rendered in Dominican Spanish as \textit{¿P'ónde va?} These phonological features combine to make much Spanish morphology more difficult to distinguish.
+
+I will specifically be working with highly informal online written Spanish. This has a number of orthographical features that would need to be adjusted for as well. Silent 'h' will often be left off, while graphemes like 'y' and 'll' or 'b' and 'v' that represent no distinction in these dialects can be freely substituted. Additionally, there are many common abbreviations specific to informal Spanish on the internet such as the use of 'k' to represent the word \textit{que}. The end result is Spanish that can look like this:
+
+manito no boi a desi k paso pero ya eso se ta resolviendo y a eso 3 lo tan ayudando lo mismo king [...] si eso no fuera verda ase mucho uviesen tao partio eso tiguere
+
+Which corresponds to the following in standard Spanish orthography:
+
+Hermanito no voy a decir que pasó pero ya eso se está resolviendo y a eso [miembro de los Trinitarios] lo están ayudando lo mismo [Latin] King. [...] si eso no fuera verdad hace mucho hubiesen estado partido eso tiguere.
+
+\section{Past Work on the Morphology of \nascomment{Your Language}}
+
+\section{Available Resources}
+
+\nascomment{include discussion of your corpora}
+
+\section{Survey of Phenomena in \nascomment{Your Language}}
+
+\section{Initial Design}
+
+\section{System Analysis on Corpus A}
+
+\section{Lessons Learned and Revised Design}
+
+\section{System Analysis on Corpus B}
+
+\section{Final Revisions}
+
+\section{Future Work}
+
+
+
+
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\label{lastpage}
+\end{document}
